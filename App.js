@@ -8,6 +8,7 @@ import {
 import ItemsList from './src/ItemsList';
 import ContactList from './src/ContactList';
 import Carousel from './src/Carousel';
+import Animations from './src/Animations';
 
 class Main extends Component {
   static navigationOptions = {
@@ -32,7 +33,8 @@ const TabNavigator = createBottomTabNavigator(
   {
     ItemsList: ItemsList,
     ContactList: ContactList,
-    Carousel: Carousel
+    Carousel: Carousel,
+    Animations: Animations,
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -46,6 +48,8 @@ const TabNavigator = createBottomTabNavigator(
           icon = require('./assets/contacts.png');
         } else if (routeName === 'Carousel') {
           icon = require('./assets/carousel.png');
+        } else if (routeName === 'Animations') {
+          icon = require('./assets/animations.png');
         }
 
         if (icon) {
