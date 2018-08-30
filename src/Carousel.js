@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, Image, Dimensions } from 'react-native';
+import { ScrollView, Image, Dimensions, Header, StatusBar } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,7 +20,11 @@ const Carousel = () => (
     style={{ backgroundColor: '#fdc65c' }}
   >
     {images.map(uri => (
-      <Image key={uri} style={{ width, height }} source={{ uri }} />
+      <Image
+        key={uri}
+        style={{ width, height: height - 112 }}
+        source={{ uri }}
+      />
     ))}
   </ScrollView>
 );

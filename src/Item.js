@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 
 const Item = ({ title = '', description = '', color = 'tomato' }) => (
-  <View style={{ height: Dimensions.get('window').height }}>
+  <View style={{ height: Dimensions.get('window').height - 112 }}>
     <View style={[styles.imagePlaceholder, { backgroundColor: color }]} />
     <View style={styles.content}>
       <View style={styles.titleContainer}>

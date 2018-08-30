@@ -7,7 +7,6 @@ import ContactSectionHeader from './ContactSectionHeader';
 
 const ContactList = () => (
   <SectionList
-    style={{ marginTop: 22 }}
     renderItem={({ item, index, _section }) => (
       <ContactItem key={item + index} text={item} />
     )}
