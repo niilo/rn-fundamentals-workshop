@@ -1,25 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
 
-const Item = () => (
-  <View style={styles.container}>
-    <View style={[styles.imagePlaceholder, { backgroundColor: 'tomato' }]} />
+const Item = ({ title = '', description = '', color = 'tomato' }) => (
+  <View style={{ height: Dimensions.get('window').height }}>
+    <View style={[styles.imagePlaceholder, { backgroundColor: color }]} />
     <View style={styles.content}>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>RN EU</Text>
+        <Text style={styles.title}>{title}</Text>
       </View>
 
       <View style={styles.descriptonContainer}>
-        <Text style={styles.description}>Best RN conference</Text>
+        <Text style={styles.description}>{description}</Text>
       </View>
     </View>
   </View>
 );
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
   imagePlaceholder: {
     flex: 2
   },

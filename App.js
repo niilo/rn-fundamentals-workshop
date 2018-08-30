@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Item from './src/Item';
+import ItemsList from './src/ItemsList';
+import ContactList from './src/ContactList';
+import Carousel from './src/Carousel';
 
 export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Item />
+        <ItemsList />
+        {/* <ContactList /> */}
+        {/* <Carousel /> */}
       </View>
     );
   }
