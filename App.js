@@ -9,6 +9,7 @@ import ItemsList from './src/ItemsList';
 import ContactList from './src/ContactList';
 import Carousel from './src/Carousel';
 import Animations from './src/Animations';
+import Gestures from './src/Gestures';
 
 class Main extends Component {
   static navigationOptions = {
@@ -35,6 +36,7 @@ const TabNavigator = createBottomTabNavigator(
     ContactList: ContactList,
     Carousel: Carousel,
     Animations: Animations,
+    Gestures: Gestures
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -50,6 +52,8 @@ const TabNavigator = createBottomTabNavigator(
           icon = require('./assets/carousel.png');
         } else if (routeName === 'Animations') {
           icon = require('./assets/animations.png');
+        } else if (routeName === 'Gestures') {
+          icon = require('./assets/gestures.png')
         }
 
         if (icon) {
