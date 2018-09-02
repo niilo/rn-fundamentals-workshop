@@ -5,6 +5,8 @@ import {
   createBottomTabNavigator
 } from 'react-navigation';
 
+import LottieView from 'lottie-react-native'
+
 import ItemsList from './src/ItemsList';
 import ContactList from './src/ContactList';
 import Carousel from './src/Carousel';
@@ -19,6 +21,7 @@ class Main extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <LottieView style={{width: 120, height: 120}} source={require('./assets/gears.json')} autoPlay loop />
         <Text style={{ fontSize: 24 }}>Welcome to the RN workshop</Text>
         <TouchableOpacity
           onPress={() => this.props.navigation.push('Examples')}
