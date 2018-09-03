@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, Animated, PanResponder } from 'react-native';
+import { View, Text, StyleSheet, Animated, PanResponder, Dimensions } from 'react-native';
 
 const BALL_SIZE = 80;
 const BALL_CENTER = BALL_SIZE / 2;
-const SCREEN_CENTER_Y = 460 / 2;
-const SCREEN_CENTER_X = 360 / 2;
+const SCREEN_CENTER_Y = Dimensions.get('window').height / 2;
+const SCREEN_CENTER_X = Dimensions.get('window').width / 2;
 
 class Gestures extends React.Component {
 
@@ -22,10 +22,11 @@ class Gestures extends React.Component {
   })
 
   onRelease = (event) => {
+    const {width, height} = Dimensions.get('window')
     Animated.parallel(
       [
         Animated.spring(this.location, {
-          toValue: { y: SCREEN_CENTER_Y, x: SCREEN_CENTER_X },
+          toValue: { y: height / 2, x: width / 2 },
           duration: 500 - event.nativeEvent.pageY,
           useNativeDriver: true
         }),

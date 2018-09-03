@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, StatusBar } from 'react-native';
 import {
   createStackNavigator,
   createBottomTabNavigator
@@ -21,6 +21,7 @@ class Main extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <StatusBar backgroundColor="rgba(255,0,0,0.6)" barStyle="dark-content" />
         <LottieView style={{width: 120, height: 120}} source={require('./assets/gears.json')} autoPlay loop />
         <Text style={{ fontSize: 24 }}>Welcome to the RN workshop</Text>
         <TouchableOpacity
